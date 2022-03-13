@@ -1,0 +1,7 @@
+weightkg =int(input('enter weight(kg)'))
+heightcm = int(input('enter height(cm)'))
+heightm2 = (heightcm / 100)
+print (heightm2)
+BMI = weightkg/(heightm2**2)
+print (BMI)
+print ('your BMI is {}'.format(BMI))
