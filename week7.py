@@ -4,19 +4,19 @@ import sys
 filename = None
 starting_point = 0
 
-if len(sys.argv) < 2:
+if len(sys.argv) < 2: #check if there are arguments in the code
     print("Needs at least one argument: <filename>")
     exit()
 
-filename = sys.argv[1]
+filename = sys.argv[1] #indicate the script to read an argument from the command line
 for idx, arg in enumerate (sys.argv):
     if arg in ("- - start" , "-s") :
         starting_point = int(sys.argv[idx + 1])
 
-print("Filename" , filename)
+print("Filename" , filename) #print the file
 print("Start:" , starting_point)
 
-if os.path.exists(filename):
+if os.path.exists(filename): #check that the file exists
     print(filename , "already exists")
 else:
     print(filename, "file does not exist")
